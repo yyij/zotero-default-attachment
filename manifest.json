@@ -1,0 +1,19 @@
+{
+  "manifest_version": 2,
+  "name": "__MSG_extensionName__",
+  "version": "1.2.2",
+  "description": "__MSG_extensionDescription__",
+  "applications": {
+    "zotero": {
+      "id": "default-attachment-choice@yinjj.local",
+      "strict_min_version": "10.0.7",
+      "strict_max_version": "10.0.*",
+      "update_url": "https://default-attachment-choice.invalid/update.json"
+    }
+  },
+  "icons": {
+    "48": "content/icon-b1.svg",
+    "96": "content/icon-b1.svg"
+  },
+  "default_locale": "en_US"
+}

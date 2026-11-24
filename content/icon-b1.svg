@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 64 64">
+  <defs>
+    <linearGradient id="paper" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#d09df9"/>
+      <stop offset=".44" stop-color="#873df0"/>
+      <stop offset=".74" stop-color="#6520d2"/>
+      <stop offset="1" stop-color="#510c70"/>
+    </linearGradient>
+    <linearGradient id="outline" x1="0" y1="0" x2=".8" y2="1">
+      <stop stop-color="#d1afff"/>
+      <stop offset="1" stop-color="#9b6cd6"/>
+    </linearGradient>
+    <clipPath id="sheet">
+      <rect x="15" y="11" width="44" height="49" rx="5"/>
+    </clipPath>
+  </defs>
+  <rect x="6.5" y="5.5" width="41" height="44" rx="5" fill="none"
+        stroke="url(#outline)" stroke-width="4"/>
+  <rect x="15" y="11" width="44" height="49" rx="5" fill="url(#paper)"/>
+  <path d="M32 46l7.5 7.5L62 30.5" fill="none" stroke="#eed9ff"
+        stroke-width="7" stroke-linejoin="round" clip-path="url(#sheet)"/>
+</svg>

@@ -1,0 +1,8 @@
+{
+  "extensionName": {
+    "message": "默认附件"
+  },
+  "extensionDescription": {
+    "message": "为 Zotero 条目手动或批量指定默认打开的附件。"
+  }
+}

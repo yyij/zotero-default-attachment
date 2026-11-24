@@ -1,0 +1,8 @@
+{
+  "extensionName": {
+    "message": "Default Attachment"
+  },
+  "extensionDescription": {
+    "message": "Choose which attachment opens when you double-click a Zotero item, individually or in bulk."
+  }
+}

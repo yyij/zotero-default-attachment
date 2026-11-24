@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+  <title data-l10n-id="dac-batch-title">Set Default Attachments in Bulk</title>
+  <link rel="localization" href="default-attachment-choice.ftl"/>
+  <style>
+    :root { color-scheme: light dark; font: message-box; }
+    body { margin: 18px; display: flex; flex-direction: column; gap: 14px;
+      height: calc(100vh - 36px); }
+    form, footer { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+    header { display: flex; align-items: center; gap: 10px; }
+    header img { flex: none; }
+    h1 { font-size: 1.35rem; margin: 0; }
+    label { display: inline-flex; gap: 4px; align-items: center; }
+    button, input, select { font: inherit; }
+    button { padding: 5px 12px; }
+    #results { flex: 1; overflow: auto; border: 1px solid GrayText; }
+    table { border-collapse: collapse; width: 100%; table-layout: fixed; }
+    th, td { text-align: start; padding: 7px; overflow-wrap: anywhere; }
+    th { position: sticky; top: 0; background: Canvas; box-shadow: 0 1px GrayText; }
+    td { border-bottom: 1px solid color-mix(in srgb, GrayText 30%, transparent); }
+    td select { width: 100%; }
+    footer { justify-content: flex-end; }
+    #status { margin: 0; }
+  </style>
+  <script src="batch.js" defer="defer"></script>
+</head>
+<body>
+  <header>
+    <img src="icon-b1.svg" width="28" height="28" alt=""/>
+    <h1 data-l10n-id="dac-batch-title"></h1>
+  </header>
+  <form id="rule">
+    <label><span data-l10n-id="dac-match"></span>
+      <select id="source">
+        <option value="title" data-l10n-id="dac-source"></option>
+        <option value="filename" data-l10n-id="dac-filename"></option>
+      </select>
+    </label>
+    <label><span data-l10n-id="dac-condition"></span>
+      <select id="mode">
+        <option value="start" data-l10n-id="dac-starts"></option>
+        <option value="end" data-l10n-id="dac-ends"></option>
+        <option value="includes" data-l10n-id="dac-contains"></option>
+      </select>
+    </label>
+    <label><span data-l10n-id="dac-keyword"></span> <input id="keyword" required="required" data-l10n-id="dac-keyword-input"/></label>
+    <label><input id="overwrite" type="checkbox"/><span data-l10n-id="dac-overwrite"></span></label>
+    <button type="submit" data-l10n-id="dac-preview"></button>
+  </form>
+  <p id="status" role="status"></p>
+  <div id="results">
+    <table>
+      <thead><tr><th data-l10n-id="dac-parent"></th><th data-l10n-id="dac-current"></th><th data-l10n-id="dac-proposed"></th></tr></thead>
+      <tbody id="rows"></tbody>
+    </table>
+  </div>
+  <footer>
+    <button id="close" type="button" data-l10n-id="dac-close"></button>
+    <button id="apply" type="button" disabled="disabled" data-l10n-id="dac-apply"></button>
+  </footer>
+</body>
+</html>

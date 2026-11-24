@@ -1,0 +1,8 @@
+{
+  "extensionName": {
+    "message": "預設附件"
+  },
+  "extensionDescription": {
+    "message": "為 Zotero 項目手動或批次指定預設開啟的附件。"
+  }
+}
